@@ -8,7 +8,7 @@ public class MainManager : MonoBehaviour
 {
     public Brick BrickPrefab;
     public int LineCount = 6;
-    public Rigidbody Ball;
+    public Rigidbody2D Ball;
 
     public Text ScoreText;
     public GameObject GameOverText;
@@ -50,7 +50,8 @@ public class MainManager : MonoBehaviour
                 forceDir.Normalize();
 
                 Ball.transform.SetParent(null);
-                Ball.AddForce(forceDir * 2.0f, ForceMode.VelocityChange);
+                //Ball.AddForce(forceDir * 2.0f, ForceMode2D.Impulse);
+                Ball.velocity = forceDir * 2.0f;
             }
         }
         else if (m_GameOver)

@@ -12,28 +12,26 @@ public class Brick : MonoBehaviour
 
     void Start()
     {
-        var renderer = GetComponentInChildren<Renderer>();
+        var renderer = GetComponentInChildren<SpriteRenderer>();
 
-        MaterialPropertyBlock block = new MaterialPropertyBlock();
         switch (PointValue)
         {
             case 1 :
-                block.SetColor("_BaseColor", Color.green);
+                renderer.color = Color.green;
                 break;
             case 2:
-                block.SetColor("_BaseColor", Color.yellow);
+                renderer.color = Color.yellow;
                 break;
             case 5:
-                block.SetColor("_BaseColor", Color.blue);
+                renderer.color = Color.blue;
                 break;
             default:
-                block.SetColor("_BaseColor", Color.red);
+                renderer.color = Color.red;
                 break;
         }
-        renderer.SetPropertyBlock(block);
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         onDestroyed.Invoke(PointValue);
         
