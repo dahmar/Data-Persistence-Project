@@ -45,6 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae693949f13e78488ec36319c04419f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colors:
+  - {r: 1, g: 0.2971698, b: 0.2971698, a: 1}
+  - {r: 1, g: 0.7080557, b: 0.3, a: 1}
+  - {r: 1, g: 0.9950784, b: 0.3, a: 1}
+  - {r: 0.3, g: 1, b: 0.3127618, a: 1}
+  - {r: 0.3, g: 1, b: 0.96340907, a: 1}
+  - {r: 0.2980392, g: 0.43924275, b: 1, a: 1}
+  - {r: 0.56279373, g: 0.3, b: 1, a: 1}
   onDestroyed:
     m_PersistentCalls:
       m_Calls: []

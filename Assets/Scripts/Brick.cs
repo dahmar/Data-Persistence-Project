@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class Brick : MonoBehaviour
 {
+    public Color[] colors;
+
     public UnityEvent<int> onDestroyed;
     
     public int PointValue;
@@ -14,21 +16,7 @@ public class Brick : MonoBehaviour
     {
         var renderer = GetComponentInChildren<SpriteRenderer>();
 
-        switch (PointValue)
-        {
-            case 1 :
-                renderer.color = Color.green;
-                break;
-            case 2:
-                renderer.color = Color.yellow;
-                break;
-            case 5:
-                renderer.color = Color.blue;
-                break;
-            default:
-                renderer.color = Color.red;
-                break;
-        }
+        renderer.color = colors[PointValue];
     }
 
     private void OnCollisionEnter2D(Collision2D other)
